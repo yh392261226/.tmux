@@ -158,7 +158,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
+tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_vbar, #{battery_vbar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
@@ -189,36 +189,36 @@ tmux_conf_theme_root_bg='none'
 tmux_conf_theme_root_attr='bold,blink'
 
 # battery bar symbols
-#tmux_conf_battery_bar_symbol_full='◼'
-#tmux_conf_battery_bar_symbol_empty='◻'
-tmux_conf_battery_bar_symbol_full='♥'
-tmux_conf_battery_bar_symbol_empty='·'
+tmux_conf_battery_bar_symbol_full='◼'
+tmux_conf_battery_bar_symbol_empty='◻'
+#tmux_conf_battery_bar_symbol_full='♥'
+#tmux_conf_battery_bar_symbol_empty='·'
 
 # battery bar length (in number of symbols), possible values are:
 #   - auto
 #   - a number, e.g. 5
-tmux_conf_battery_bar_length='auto'
+tmux_conf_battery_bar_length='1'
 
 # battery bar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - 'colour_full_fg,colour_empty_fg,colour_bg'
-tmux_conf_battery_bar_palette='gradient'
-#tmux_conf_battery_bar_palette='#d70000,#e4e4e4,#000000'   # red, white, black
+#tmux_conf_battery_bar_palette='gradient'
+tmux_conf_battery_bar_palette='#d70000,#e4e4e4,#000000'   # red, white, black
 
 # battery hbar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - 'colour_low,colour_half,colour_full'
-tmux_conf_battery_hbar_palette='gradient'
-#tmux_conf_battery_hbar_palette='#d70000,#ff5f00,#5fff00'  # red, orange, green
+#tmux_conf_battery_hbar_palette='gradient'
+tmux_conf_battery_hbar_palette='#d70000,#ff5f00,#5fff00'  # red, orange, green
 
 # battery vbar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - 'colour_low,colour_half,colour_full'
 tmux_conf_battery_vbar_palette='gradient'
-#tmux_conf_battery_vbar_palette='#d70000,#ff5f00,#5fff00'  # red, orange, green
+tmux_conf_battery_vbar_palette='#d70000,#ff5f00,#5fff00'  # red, orange, green
 
 # symbols used to indicate whether battery is charging or discharging
 #tmux_conf_battery_status_charging='↑'       # U+2191
